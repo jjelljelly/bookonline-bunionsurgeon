@@ -1,0 +1,52 @@
+.progress {
+    width: 70%;
+    max-width: 920px;
+    margin: 20px auto 0 auto;
+    border: 2px solid var(--half-white);
+    background-color: var(--translucent);
+    padding: 0 10px 10px 10px;
+    box-sizing: border-box;
+}
+
+.progressBox {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.progressTitle {
+    margin: 15px 0;
+    color: white;
+    font-weight: 200;
+    font-size: 20px;
+}
+
+.stageNumber {
+    width: 40px;
+    height: 40px;
+    background-color: var(--half-white);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 200;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 1025px) {
+    .progress {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .progressTitle {
+        font-size: 16px;
+    }
+    .stageNumber {
+        width: 30px;
+        height: 30px;
+    }
+}

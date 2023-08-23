@@ -1,0 +1,76 @@
+.form {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.selection {
+    width: 80%;
+    margin: 20px 0;
+}
+
+.formation {
+    width: 60%;
+    padding: 20px;
+    font-weight: 400;
+    background-color: var(--translucent);
+    border: 2px solid white;
+    box-sizing: border-box;
+}
+
+.formation input {
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.stageContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.stageButton {
+    width: 45%;
+    margin: 20px 0;
+    padding: 10px 0;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-family: inherit;
+    font-weight: 200;
+    color: var(--the-black);
+    -webkit-appearance: none;
+}
+
+@media (hover:hover) {
+    .stageButton:hover {
+        background-color: var(--the-blue);
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .form {
+        width: 98%;
+    }
+    .formation {
+        width: 92%;
+    }
+    .stageContainer {
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .stageContainer {
+        flex-direction: column;
+    }
+    .stageButton {
+        width: 100%;
+    }
+}

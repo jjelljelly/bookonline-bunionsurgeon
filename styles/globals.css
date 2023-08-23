@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'entypo-fontello';
+  src: url(/public/fonts/entypo-fontello.woff) format('woff'), /* Pretty Modern Browsers */
+}
+
+:root {
+  --the-black: #444;
+  --the-blue: #899eb1;
+  --half-white: rgba(255, 255, 255, 0.94);
+  --translucent: rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'entypo-fontello', Helvetica Neue, sans-serif;
+  font-weight: 100;
+  text-align: center;
+  color: var(--the-black);
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 40px;
+  color: white;
+  font-weight: 200;
+  margin: 20px 0;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 150;
+  margin: 10px 0;
+}
+
+h3 {
+  font-size: 16px;
+  font-weight: 150;
+  margin: 10px 0;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 150;
+  margin: 10px 0;
+}
+
+h5 {
+  font-size: 14px;
+  font-weight: 150;
+  margin: 10px 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  h2 {
+    font-size: 18px;
+  }
+}

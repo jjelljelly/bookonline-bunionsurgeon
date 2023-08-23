@@ -1,0 +1,79 @@
+.fuPayContainer {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+    padding-bottom: 100px;
+}
+
+.selection {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.fuPay {
+    margin: 20px auto;
+    width: 70%;
+    border: 2px solid white;
+    background-color: var(--translucent);
+    color: white;
+    font-weight: 400;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.fuPay input {
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.fuPpContainer {
+    width: 70%;
+    margin: auto;
+}
+
+.hr {
+    width: 70%;
+    margin: auto;
+}
+
+.stageButton {
+    width: 70%;
+    margin: 20px 0;
+    padding: 10px 0;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-family: inherit;
+    font-weight: 200;
+    color: var(--the-black);
+}
+
+@media (hover:hover) {
+    .stageButton:hover {
+        background-color: var(--the-blue);
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .fuPayContainer {
+        width: 98%;
+    }
+    .fuPay {
+        width: 92%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .fuPay {
+        width: 96%;
+    }
+
+    .fuPpContainer {
+        width: 96%;
+        margin: auto;
+    }
+    .stageButton {
+        width: 96%;
+    }
+}

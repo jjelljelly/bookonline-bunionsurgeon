@@ -1,0 +1,38 @@
+.appointments {
+    width: 70%;
+    max-width: 920px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.appointmentCard {
+    width: 48%;
+    margin: 0 0 20px 0;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: var(--half-white);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+@media (hover:hover) {
+    .appointmentCard:hover {
+        background-color: white;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .appointments {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .appointmentCard {
+        width: 100%;
+    }
+}

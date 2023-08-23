@@ -1,0 +1,17 @@
+.thanks {
+    border: 2px solid white;
+    color: white;
+    font-weight: 400;
+    width: 70%;
+    max-width: 920px;
+    margin: 20px auto 0 auto;
+    padding: 0 20px;
+    box-sizing: border-box;
+    background-color: var(--translucent);
+}
+
+@media only screen and (max-width: 1025px) {
+    .thanks {
+        width: 90%;
+    }
+}

@@ -1,0 +1,119 @@
+.calendar {
+    width: 70%;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    color: var(--the-black);
+}
+
+.calendar hr {
+    width: 96%;
+    margin: 5px auto;
+}
+
+.calendar h2 {
+    color: white;
+    font-weight: 400;
+}
+
+.calendar button { 
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+.calendar button:hover {
+    background-color: var(--the-black);
+    color: white;
+    transition: 0.4s;
+}
+
+.calendarField {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    padding: 10px 5px;
+}
+
+.calUiContainer {
+    width: 92%;
+    margin: 10px auto;
+    padding: 10px 0;
+    background-color: var(--translucent);
+    border: 3px solid white;
+    box-sizing: border-box;
+}
+
+.calHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 15px 0 15px;
+}
+
+.calNavButton {
+    padding: 5px 15px;
+}
+
+.dayNames {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.dayName {
+    width: 14%;
+    color: var(--the-black);
+    padding: 15px 0;
+    font-weight: 800;
+}
+
+.calDays {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+
+.day {
+    width: 14%;
+    padding: 20px 0;
+    cursor: pointer;
+    background-color: white;
+    box-sizing: border-box;
+    font-weight: 800;
+}
+
+.day:hover {
+    background-color: var(--the-black);
+    color: var(--the-white);
+    transition: 0.2s;
+}
+
+.stageButton {
+    width: 45%;
+    margin: 20px 0;
+    padding: 10px 0;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-family: inherit;
+    font-weight: 200;
+    color: var(--the-black);
+}
+
+@media (hover:hover) {
+    .stageButton:hover {
+        background-color: var(--the-blue);
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .calendar {
+        width: 98%;
+        margin: 10px auto;
+    }
+    .stageButton {
+        width: 90%;
+    }
+}

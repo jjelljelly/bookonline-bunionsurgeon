@@ -1,0 +1,111 @@
+.dates {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    color: white;
+}
+
+.navigate {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.arrow {
+    margin: 0 30px;
+    padding:  5px 10px;
+    font-size: 20px;
+    color: var(--the-black);
+    background-color: white;
+    cursor: pointer;
+}
+
+@media (hover:hover) {
+    .arrow:hover {
+        background-color: var(--the-blue);
+        color: white;
+    }
+}
+
+.dateRange {
+    font-size: 20px;
+    font-weight: 400;
+    width: 100%;
+    border: 1px solid white;
+    padding: 5px 0;
+    background-color: var(--translucent);
+}
+
+.dateHead {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.time {
+    background-color: white;
+    color: var(--the-black);
+    font-size: 14px;
+    margin: 10px 0;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+}
+
+@media (hover:hover) {
+    .time:hover {
+        background-color: var(--the-blue);
+        color: white;
+    }
+}
+
+.stageButton {
+    width: 45%;
+    margin: 20px 0 150px 0;
+    padding: 10px 0;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    font-family: inherit;
+    font-weight: 200;
+    color: var(--the-black);
+}
+
+@media (hover:hover) {
+    .stageButton:hover {
+        background-color: var(--the-blue);
+        color: white;
+    }
+}
+
+@media only screen and (max-width: 1025px) {
+    .dates {
+        width: 98%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .arrow {
+        margin: 0;
+        font-size: 12px;
+    }
+    .dateRange {
+        width: 70%;
+        font-size: 12px;
+    }
+    .dateHead {
+        font-size: 11px;
+    }
+    .time {
+        font-size: 11px;
+    }
+    .stageButton {
+        width: 90%;
+    }
+}
