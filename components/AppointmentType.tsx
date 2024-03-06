@@ -15,9 +15,10 @@ const AppointmentType = ({ selectType }: Props) => {
             <Link
               key={type}
               href={type === 'KN-VIRTUAL' ? '/virtual-appointments' : '/'}
+              className={style.appointmentCard}
             >
               <div
-                className={style.appointmentCard}
+                // className={style.appointmentCard}
                 onClick={() => selectType(type, aTypes[type]['length'])}
               >
                 <h2>{aTypes[type]['type']}</h2>

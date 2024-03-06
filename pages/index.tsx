@@ -70,6 +70,7 @@ export default function Home() {
       setStage(stages[3])
       const completeFollowUp = (result: any) => {
         setAvailability(result)
+        setLoading(false)
         setType(type)
       }
       methods.post(

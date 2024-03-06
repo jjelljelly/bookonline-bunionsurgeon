@@ -15,25 +15,40 @@ interface Props {
     profile: [string, string]
 }
 
+export function getDateComponents([date, time]) {
+
+    const splitDate = date.split('/')
+    const splitTime = time.split(' ')[0].split(':')
+    const hours = time.includes('PM') ? Number(splitTime[1]) + 12 : splitTime[0]
+    const dateObj = new Date(splitDate[2], Number(splitDate[1]) - 1, splitDate[0], hours, splitTime[1])
+    return {
+        month: dateObj.getMonth(),
+        date: dateObj.getDate(),
+        year: dateObj.getFullYear(),
+        hours: dateObj.getHours(),
+        minutes: dateObj.getMinutes()
+    }
+}
+
 const FinaliseFollowUp: React.FC<Props> = (props) => {
-    const selectedDate = new Date(props.selectedTime[0] + ' ' + props.selectedTime[1]).toString()
     const [fuEmail, setFuEmail] = useState<string>('');
     const [privacy, setPrivacy] = useState<boolean>(false);
 
     //submit function
     const submitFU = () => {
         props.setLoading(true);
-        const d = new Date(props.selectedTime[0] + ' ' + props.selectedTime[1]);
+        const { date, month, hours, minutes } = getDateComponents(props.selectedTime)
+        const year = props.selectedTime[0].split('/')[2]
         const data = {
             first_name: props.profile[0],
             last_name: props.profile[1],
             email: fuEmail,
             appointmentType: props.type,
-            year: d.getFullYear(),
-            month: d.getMonth(),
-            date: d.getDate(),
-            hours: d.getHours(),
-            minutes: d.getMinutes()
+            year,
+            month,
+            date,
+            hours,
+            minutes
         }
         console.log(data)
         const complete = () => {
@@ -46,13 +61,14 @@ const FinaliseFollowUp: React.FC<Props> = (props) => {
             complete
         )
     }
-
+    const selectedComponents = getDateComponents([props.selectedTime[0], props.selectedTime[1]])
+    const selectedDate = new Date(selectedComponents.year, selectedComponents.month, selectedComponents.date, selectedComponents.hours, selectedComponents.minutes)
     return (
         <div className={style.fuPayContainer}>
             <div className={style.fuPay}>
                 <div className={style.selection}>
                     <strong>You have selected: </strong>
-                    {selectedDate.split(':00 GMT')[0]}
+                    {selectedDate.toDateString() + ' at ' + `${selectedComponents.hours}:${selectedComponents.minutes < 10 ? '0' : ''}${selectedComponents.minutes}`}
                 </div>
                 <hr className={style.hr} />
                 <p>Please provide an email address to receive confirmation of your appointment.</p>
