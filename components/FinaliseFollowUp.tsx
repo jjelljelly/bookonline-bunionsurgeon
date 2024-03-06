@@ -50,10 +50,10 @@ const FinaliseFollowUp: React.FC<Props> = (props) => {
             hours,
             minutes
         }
-        console.log(data)
+
         const complete = () => {
-            props.setStage(5)
             props.setLoading(false)
+            props.setStage(5)
         }
         methods.post(
             process.env.NEXT_PUBLIC_BOOK_FU,

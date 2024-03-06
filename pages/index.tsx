@@ -71,7 +71,7 @@ export default function Home() {
       const completeFollowUp = (result: any) => {
         setAvailability(result)
         setLoading(false)
-        setType(type)
+        // setType(type)
       }
       methods.post(
         process.env.NEXT_PUBLIC_AVAILABILITY,
@@ -83,6 +83,8 @@ export default function Home() {
 
   //handle client profile through stages
   const [selectedTime, setSelectedTime] = useState<[date: string, time: string]>()
+
+  console.log('stage', stage)
 
   return (
     <Layout>

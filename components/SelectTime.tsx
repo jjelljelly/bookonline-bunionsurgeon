@@ -11,6 +11,7 @@ interface Props {
 }
 
 const SelectTime = ({ availability, setStage, setSelectedTime, found }: Props) => {
+    console.log('select time availability', availability)
     //reduce availability to collection of dates
     const times = availability.reduce((times, cur: string) => {
         const date = cur.split(',')[0];

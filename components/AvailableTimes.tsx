@@ -9,6 +9,7 @@ interface Props {
 
 const AvailableTimes: React.FC<Props> = (props) => {
     let times = props.availableTimes;
+    console.log('times', times)
     const dateArgs: [string, string] = times[0].split(',') as any
     const dateComponents = getDateComponents(dateArgs)
     console.log(dateComponents)

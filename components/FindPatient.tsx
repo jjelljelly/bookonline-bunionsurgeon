@@ -19,11 +19,12 @@ const FindPatient = ({ setFound, setLoading, availability, setStage, setProfile 
         temp[name] = value;
         setFields(temp)
     }
+    console.log('availability', availability)
 
     //form submission
     const submit = (e: any) => {
         e.preventDefault()
-        setLoading(true)
+        // setLoading(true)
         const data = {
             dob: fields.date_of_birth.split('-').reverse().join('.'),
             name: fields.last_name
@@ -31,10 +32,13 @@ const FindPatient = ({ setFound, setLoading, availability, setStage, setProfile 
         const complete = (result: any) => {
             setFound(result)
             setProfile([fields.first_name, fields.last_name])
-            availability.length > 0 ? setLoading(false) : setLoading(true)
-            result[0] == true && setStage(1)
+            if (availability.length > 0) {
+                setLoading(false)
+            }
+            if (result[0] === true) {
+                setStage(1)
+            }
         }
-        //setLoading(true)
         methods.post(
             process.env.NEXT_PUBLIC_FIND_FU,
             data,
