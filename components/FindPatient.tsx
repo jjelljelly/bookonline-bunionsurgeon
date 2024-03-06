@@ -24,7 +24,7 @@ const FindPatient = ({ setFound, setLoading, availability, setStage, setProfile 
     //form submission
     const submit = (e: any) => {
         e.preventDefault()
-        // setLoading(true)
+        setLoading(true)
         const data = {
             dob: fields.date_of_birth.split('-').reverse().join('.'),
             name: fields.last_name
